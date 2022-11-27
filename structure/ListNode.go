@@ -1,8 +1,8 @@
 package structure
 
 type ListNode struct {
-	val  int
-	next *ListNode
+	Val  int
+	Next *ListNode
 }
 
 // List2Array
@@ -13,8 +13,8 @@ func List2Array(node *ListNode) []int {
 		if node == nil {
 			break
 		}
-		arr = append(arr, node.val)
-		node = node.next
+		arr = append(arr, node.Val)
+		node = node.Next
 	}
 
 	return arr
@@ -32,11 +32,11 @@ func Arr2List(arr []int) *ListNode {
 
 	for _, num := range arr {
 		cur := ListNode{
-			val: num, next: nil,
+			Val: num, Next: nil,
 		}
-		base.next = &cur
-		base = base.next
+		base.Next = &cur
+		base = base.Next
 	}
 
-	return vHead.next
+	return vHead.Next
 }
